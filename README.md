@@ -1,33 +1,22 @@
-# WEB_VIEW_EXT
+# WEBVIEW_EXT
 ## SET_UP
-### FOR_IOS 
-<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-</dict>
-
-### FOR_ANDROID
-SET MINIMUM SDK 19
->inside of the loaded event 
-const webView = event.object
-        //For Android Set up
-        if(webView.android){
-            webView.android.getSettings().setDomStorageEnabled(true);
-            webView.android.getSettings().setBuiltInZoomControls(false);
-            webView.android.getSettings().setAllowFileAccess(true);
-            webView.android.getSettings().setJavaScriptEnabled(true);
-            webView.android.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
-}
-
+### INSTALL 
+>tns plugin add @nota/nativescript-webview-ext
+>Vue.registerElement('WebViewExt', () => require('@nota/nativescript-webview-ext').WebViewExt)
 ## DATA_TRANSPER
->inside of the WEBVIEWEXT tag
-@eventFromWeb='processEvent'
-//inside of the methods in scipt
-processEvent(args) {
-      console.log("EVENT RECEIVED FROM WEB~!")
-      console.dir(args.data.a);
-},
+## WEBVIEW
+## EVENT BLOCK OR PROCESS
+
+
+# FIREBASE
+## SET_UP
+>tns plugin add @nativescript/firebase
+>CLI SET_UP -> firebase.nativescript.json
+>adding google-service file both platform
+
+### PUSH_NOTIFICATION
+>Enable Push notification in XCode
+>Copy <application.name>.entitlement file in platform to App_Resources.IOS
 
 
 # NativeScript-Vue Application

@@ -10,6 +10,30 @@
 
 <script >
 import WebView from './WebView';
+//import { firebase } from '@nativescript/firebase';
+
+firebase.init({
+    // Whether you want this plugin to automatically display the notifications or just notify the callback. Currently used on iOS only. Default true.
+  showNotifications: true,
+  autoClearBadge: false,
+  // Whether you want this plugin to always handle the notifications when the app is in foreground. Currently used on iOS only. Default false.
+  showNotificationsWhenInForeground: true,
+  onPushTokenReceivedCallback: function(token) {
+      console.log("Firebase push token: " + token);
+      
+  },
+  onMessageReceivedCallback: function(message) {
+      console.log("Title: " + message.title);
+      console.log("Body: " + message.body);
+    }
+}).then(
+    function () {
+      console.log("firebase.init done");
+    },
+    function (error) {
+      console.log("firebase.init error: " + error);
+    }
+);
   export default {
     data() {
       return {
