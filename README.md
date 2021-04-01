@@ -1,15 +1,15 @@
-### WEB_VIEW_EXT
+# WEB_VIEW_EXT
 ## SET_UP
-# FOR_IOS 
+### FOR_IOS 
 <key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 </dict>
 
-# FOR_ANDROID
+### FOR_ANDROID
 SET MINIMUM SDK 19
-//inside of the loaded event 
+>inside of the loaded event 
 const webView = event.object
         //For Android Set up
         if(webView.android){
@@ -21,7 +21,7 @@ const webView = event.object
 }
 
 ## DATA_TRANSPER
-//inside of the WEBVIEWEXT tag
+>inside of the WEBVIEWEXT tag
 @eventFromWeb='processEvent'
 //inside of the methods in scipt
 processEvent(args) {
