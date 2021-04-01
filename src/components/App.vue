@@ -11,6 +11,7 @@
 <script >
 import WebView from './WebView';
 //import { firebase } from '@nativescript/firebase';
+const firebase = require("@nativescript/firebase").firebase;
 
 firebase.init({
     // Whether you want this plugin to automatically display the notifications or just notify the callback. Currently used on iOS only. Default true.
