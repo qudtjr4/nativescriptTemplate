@@ -21,8 +21,10 @@
 > 2. Copy <application.name>.entitlement file in platform to App_Resources.IOS
 > 3. Register APN Key in Firebase Console
 
+# Camera Module
 
-
+# Barcode Scan Module
+>1. tns plugin add nativescript-barcodescanner
 
 
 

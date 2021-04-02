@@ -3,6 +3,9 @@ import App from './components/App'
 import VueDevtools from 'nativescript-vue-devtools'
 
 Vue.registerElement('WebViewExt', () => require('@nota/nativescript-webview-ext').WebViewExt)
+Vue.registerElement('BarcodeScanner', () => require('nativescript-barcodescanner').BarcodeScannerView);
+
+
 if(TNS_ENV !== 'production') {
   Vue.use(VueDevtools)
 }

@@ -1,31 +1,11 @@
 <template>
     <Page>
-        <WebViewExt @loaded='onLoaded' @eventTest='eventTest2' 
+        <WebViewExt @loaded='onLoaded' @openBarcode='processEvent' 
         :src="url" />
     </Page>
 </template>
 <script >
-import { isAvailable, requestCameraPermissions, takePicture } from '@nativescript/camera';
-
-var imageModule = require("tns-core-modules/ui/image");
-requestCameraPermissions().then(
-    function success() {
-    // permission request accepted or already granted 
-    // ... call camera.takePicture here ...
-    // camera.takePicture()   
-    //     .then(function (imageAsset) {
-    //         console.log("Result is an image asset instance");
-    //         var image = new imageModule.Image();
-    //         image.src = imageAsset;
-    //     }).catch(function (err) {
-    //         console.log("Error -> " + err.message);
-    //     });
-    }, 
-    function failure() {
-    // permission request rejected
-        console.log("FAIL TO ROAD CAMERA")
-    }
-);
+import Camera from './Camera';
 export default {
     props : ['url'],
     data(){
@@ -33,9 +13,10 @@ export default {
         }
     },
    methods :{
-    eventTest2(args) {
-      console.log("EVENT RECEIVED FROM WEB~!")
-      console.dir(args.data.a);
+    processEvent(args) {
+      console.log("EVENT RECEIVED FROM WEB~!");
+      console.dir(args.data);
+      this.$navigateTo(Camera);
     },
     
     onLoaded(event) {
@@ -54,6 +35,7 @@ export default {
    },
    mounted(){
        console.dir("ASDASDASDASDASDASDASDASDASDASDASDASDASDASD")
+       console.log(this.url)
    },
 };
 </script>

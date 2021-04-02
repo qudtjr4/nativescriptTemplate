@@ -3,15 +3,31 @@
         <ActionBar title="Welcome to NativeScript-Vue!"/>
         <StackLayout>
           <Button text="Web View EXT" col="0" row="0" @tap="navigateToWebView()" padding="10" backgroundColor="#cc99ff" color="white"/>
-          <Button text="aaaa" col="0" row="1" @tap="navigateAndChangeMain()" padding="10" backgroundColor="#cc99ff" color="white"/>
+          <Button text="Scan" col="0" row="1" @tap="navigateToCamera()" padding="10" backgroundColor="#cc99ff" color="white"/>
         </StackLayout>
     </Page>
 </template>
 
 <script >
 import WebView from './WebView';
+import Camera from './Camera';
+
 //import { firebase } from '@nativescript/firebase';
 const firebase = require("@nativescript/firebase").firebase;
+import {requestCameraPermissions} from '@nativescript/camera';
+
+requestCameraPermissions().then(
+    function success() {
+    // permission request accepted or already granted 
+    // ... call camera.takePicture here ...
+    console.log("SUCCESS")
+    
+    },
+    function failure() {
+    // permission request rejected
+        console.log("FAIL TO ROAD CAMERA")
+    }
+);
 
 firebase.init({
     // Whether you want this plugin to automatically display the notifications or just notify the callback. Currently used on iOS only. Default true.
@@ -44,6 +60,9 @@ firebase.init({
     methods :{
       navigateToWebView(){
         this.$navigateTo(WebView)
+      },
+      navigateToCamera(){
+        this.$navigateTo(Camera)
       }
     }
   }
