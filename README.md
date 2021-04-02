@@ -12,11 +12,18 @@
 ## SET_UP
 >tns plugin add @nativescript/firebase
 >CLI SET_UP -> firebase.nativescript.json
+>external_push_client_only: true
+>messaging: true
 >adding google-service file both platform
 
-### PUSH_NOTIFICATION
+### PUSH_NOTIFICATION FOR IOS
 >Enable Push notification in XCode
 >Copy <application.name>.entitlement file in platform to App_Resources.IOS
+>Register APN Key in Firebase Console
+
+
+
+
 
 
 # NativeScript-Vue Application

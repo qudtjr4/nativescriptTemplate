@@ -2,17 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>enter your camera permission request text here</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>enter your photo library permission request text here</string>
+	
 	<key>UIBackgroundModes</key>
 		<array>
 			<string>remote-notification</string>
 		</array>
 	<key>UseExternalPushProvider</key>
 	<true/>
+	
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>

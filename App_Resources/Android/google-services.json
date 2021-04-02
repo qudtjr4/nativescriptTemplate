@@ -7,6 +7,42 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:601602092982:android:10e09f51e24db99073db17",
+        "android_client_info": {
+          "package_name": "net.eventconnector.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "601602092982-m1ahma9esnjfrnpc88ak660sv0q0dal0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQnCChhW6OFDseWFxBY50p3whqJZgmCxQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "601602092982-m1ahma9esnjfrnpc88ak660sv0q0dal0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "601602092982-1b315o7u54ouih2htv6754kruttd3ako.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.nativescript.application"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:601602092982:android:57f71b577652783973db17",
         "android_client_info": {
           "package_name": "org.nativescript.application"
@@ -29,6 +65,13 @@
             {
               "client_id": "601602092982-m1ahma9esnjfrnpc88ak660sv0q0dal0.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "601602092982-1b315o7u54ouih2htv6754kruttd3ako.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.nativescript.application"
+              }
             }
           ]
         }
